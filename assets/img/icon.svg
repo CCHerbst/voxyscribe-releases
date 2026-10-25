@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- A filled square in the state color, so the icon reads on light and dark taskbars. -->
+  <rect width="64" height="64" rx="14" fill="#475A84"/>
+  <g transform="translate(32 32) scale(0.72) translate(-32 -34)" fill="none" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Sound waves -->
+    <path d="M8 20 Q2 32 8 44" stroke-width="4"/>
+    <path d="M14 24 Q10 32 14 40" stroke-width="4"/>
+    <path d="M56 20 Q62 32 56 44" stroke-width="4"/>
+    <path d="M50 24 Q54 32 50 40" stroke-width="4"/>
+    <!-- V letter -->
+    <path d="M20 16 L32 52 L44 16" stroke-width="7"/>
+  </g>
+</svg>

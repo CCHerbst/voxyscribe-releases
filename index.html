@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoxyScribe · Voice typing for Windows, on your PC</title>
+<meta name="description" content="Hold a key, talk, and let go: your words appear wherever you're typing. VoxyScribe turns speech into text on your own PC, with no account and no cloud. Free for Windows 10 and 11.">
+<meta name="theme-color" content="#090c13">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="canonical" href="https://ccherbst.github.io/voxyscribe-releases/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="VoxyScribe">
+<meta property="og:title" content="VoxyScribe · Voice typing for Windows, on your PC">
+<meta property="og:description" content="Hold a key, talk, and let go: your words appear wherever you're typing. Speech recognition runs on your own PC. Free for Windows 10 and 11.">
+<meta property="og:url" content="https://ccherbst.github.io/voxyscribe-releases/">
+<meta property="og:image" content="https://ccherbst.github.io/voxyscribe-releases/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="assets/fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/instrument-serif-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/hanken-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
+<script src="assets/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#main" aria-label="VoxyScribe, back to top">
+      <img src="assets/img/icon.svg" alt="" width="28" height="28">
+      <span>VoxyScribe</span>
+    </a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#how">How it works</a>
+      <a href="#features">Features</a>
+      <a href="#files">Audio files</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="https://github.com/CCHerbst/voxyscribe-releases/releases/latest" data-download>Download</a>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ Hero ============ -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div class="hero-copy">
+      <p class="eyebrow rise" style="--i:0"><span class="live-dot"></span>Voice typing for Windows</p>
+      <h1 class="display rise" style="--i:1">Say it.<br><em>It’s typed.</em></h1>
+      <p class="lede rise" style="--i:2">Hold a key, talk, and let go. Your words appear wherever your cursor is, in any app. VoxyScribe turns speech into text <strong>on your own PC</strong>, so what you say never leaves it.</p>
+      <div class="cta rise" style="--i:3">
+        <a class="btn btn-primary btn-lg" href="https://github.com/CCHerbst/voxyscribe-releases/releases/latest" data-download>
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M0 2.8l8.2-1.1v7.9H0zm9.2-1.3L20 0v9.6H9.2zM0 10.4h8.2v7.9L0 17.2zm9.2 0H20V20l-10.8-1.5z"/></svg>
+          <span>Download for Windows<small data-meta>Free · Windows 10 and 11</small></span>
+        </a>
+        <a class="btn btn-ghost" href="#how">See how it works</a>
+      </div>
+      <ul class="assurances rise" style="--i:4">
+        <li>Free to use</li>
+        <li>No account</li>
+        <li>Works offline</li>
+      </ul>
+    </div>
+
+    <div class="stage rise" style="--i:3">
+      <p class="sr-only">An animation: someone holds Ctrl, Shift and Space, speaks, and their sentences appear in Notepad as they let go.</p>
+      <div class="screen" aria-hidden="true">
+        <div class="notes">
+          <div class="notes-bar"><span class="doc-ico"></span><span class="t">Reply to Siobhan.txt - Notepad</span><span class="ctl"><i></i><i></i><i></i></span></div>
+          <div class="notes-menu"><span>File</span><span>Edit</span><span>View</span></div>
+          <div class="notes-body" id="doc"><span class="caret"></span></div>
+        </div>
+        <div class="pill" id="hero-pill" data-theme="dark" data-style="scrolling"></div>
+      </div>
+      <div class="hold" id="hold" aria-hidden="true">
+        <kbd>Ctrl</kbd><span class="plus">+</span><kbd>Shift</kbd><span class="plus">+</span><kbd>Space</kbd>
+        <span class="lbl" id="hold-lbl">Hold to talk</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ How it works ============ -->
+<section class="band" id="how">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="kicker">How it works</p>
+      <h2 class="title">Three steps. <em>Nothing to learn.</em></h2>
+    </div>
+    <ol class="steps">
+      <li data-reveal style="--d:0">
+        <span class="num">1</span>
+        <h3>Hold the hotkey</h3>
+        <p>Click where you want the words: an email, a document, a chat. Then hold <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Space</kbd>.</p>
+      </li>
+      <li data-reveal style="--d:1">
+        <span class="num">2</span>
+        <h3>Talk normally</h3>
+        <p>A small listening bar shows your voice and the words as they're heard. Punctuation and capitals come with them.</p>
+      </li>
+      <li data-reveal style="--d:2">
+        <span class="num">3</span>
+        <h3>Let go</h3>
+        <p>Your words appear at your cursor. Changed your mind? Press any other key while you hold the hotkey, and nothing is typed.</p>
+      </li>
+    </ol>
+    <p class="aside" data-reveal>
+      <span class="lock" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2.5" fill="currentColor" stroke="none"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+      <span>Talking for a while? <strong>Double-tap the hotkey</strong> to go hands-free, and tap it once when you're done. Turn on <strong>Type as I talk</strong> and each phrase appears as you pause.</span>
+    </p>
+  </div>
+</section>
+
+<!-- ============ Features ============ -->
+<section class="band" id="features">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="kicker">Features</p>
+      <h2 class="title">Made for people who <em>think out loud.</em></h2>
+    </div>
+
+    <div class="bento">
+      <article class="card span-3" data-reveal style="--d:0">
+        <p class="tag">On your PC</p>
+        <h3>Your voice never leaves your computer</h3>
+        <p>VoxyScribe uses NVIDIA's Parakeet speech model, running on your own processor. There's no account and no cloud service, and after the first-time setup it works without the internet.</p>
+        <div class="viz flow" aria-hidden="true">
+          <span class="cloud"><svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 14.5h10.5a4 4 0 0 0 .4-8 5.5 5.5 0 0 0-10.6-1A4.3 4.3 0 0 0 6 14.5z"/><path d="M2 1l18 14" stroke-linecap="round"/></svg>Cloud: not involved</span>
+          <span class="node"><b><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor" stroke="none"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21"/></svg></b>Your voice</span>
+          <span class="wire"></span>
+          <span class="node pc"><b><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></b>Your PC</span>
+          <span class="wire"></span>
+          <span class="node"><b style="font:600 17px/1 var(--serif);font-style:italic">Aa</b>Your text</span>
+        </div>
+      </article>
+
+      <article class="card span-3" data-reveal style="--d:1">
+        <p class="tag">Fast</p>
+        <h3>Ready before you reach for the mouse</h3>
+        <p>A five-second sentence is ready in under half a second on an 8-core desktop processor. No graphics card needed.</p>
+        <div class="viz race" aria-hidden="true">
+          <div class="row you"><span>You speak</span><span class="track"><span class="fill"></span></span><span class="num">5.0 s</span></div>
+          <div class="row vs"><span>VoxyScribe</span><span class="track"><span class="fill"></span></span><span class="num">0.44 s</span></div>
+        </div>
+        <p class="fine">Measured on an Intel Core i7-10700K.</p>
+      </article>
+
+      <article class="card span-4" data-reveal style="--d:0">
+        <p class="tag">A dictionary that learns</p>
+        <h3>Teach it your words once</h3>
+        <p>Add names and terms, and VoxyScribe listens for them. If it gets one wrong, fix it where it was typed, select your fix, and press <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>L</kbd>. It gets it right from then on.</p>
+        <div class="viz" aria-hidden="true">
+          <div class="fix">
+            We're moving the billing service over to
+            <span class="swap"><span class="bad">cooper netties.</span><span class="good">Kubernetes.</span></span>
+            <span class="toast">Learned: cooper netties → Kubernetes <u>Undo</u></span>
+          </div>
+          <div class="fix-keys"><span>Select the fix, then</span> <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>L</kbd></div>
+        </div>
+      </article>
+
+      <article class="card span-2" data-reveal style="--d:1">
+        <p class="tag">Voice commands</p>
+        <h3>Say it, and it's done</h3>
+        <p>Say a command on its own and VoxyScribe carries it out.</p>
+        <div class="viz chips" aria-label="Examples of voice commands">
+          <span class="chip">“new paragraph”</span>
+          <span class="chip">“new line”</span>
+          <span class="chip">“question mark”<b>?</b></span>
+          <span class="chip">“comma”<b>,</b></span>
+          <span class="chip">“delete that”</span>
+          <span class="chip">“undo”</span>
+        </div>
+      </article>
+
+      <article class="card span-2" data-reveal style="--d:0">
+        <p class="tag">Type as I talk</p>
+        <h3>Long thoughts, typed as you go</h3>
+        <p>In hands-free mode, each phrase is typed at the pause after it, instead of all at the end.</p>
+        <div class="viz phrases" id="phrases" aria-hidden="true"><span>So here's my plan for the week.</span> <span>Monday I'll finish the draft,</span> <span>Tuesday we review it together,</span> <span>and it goes out Thursday.</span></div>
+      </article>
+
+      <article class="card span-2" data-reveal style="--d:1">
+        <p class="tag">Snippets</p>
+        <h3>Short phrases, long text</h3>
+        <p>Say a few words and get the paragraph you type every day.</p>
+        <div class="viz snip" aria-hidden="true">
+          <span class="say">“my sign off”</span>
+          <span class="arrow">becomes</span>
+          <span class="out">Best regards,
+Alex Morgan</span>
+        </div>
+      </article>
+
+      <article class="card span-2" data-reveal style="--d:2">
+        <p class="tag">Quiet</p>
+        <h3>Other apps hush while you talk</h3>
+        <p>Music and videos mute while the microphone is on and come back when you stop. You can turn this off.</p>
+        <div class="viz quiet" aria-hidden="true">
+          <span class="spk"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="currentColor"/><g class="waves"><path d="M15.5 9a4 4 0 0 1 0 6"/><path d="M18 6.5a7.5 7.5 0 0 1 0 11"/></g><path class="slash" d="M15 8.5l6 7"/></svg></span>
+          <span class="lbls"><b>While you talk:</b> muted<br><b>When you stop:</b> back on</span>
+        </div>
+      </article>
+
+      <article class="card span-3 c-wide" data-reveal style="--d:0">
+        <p class="tag">Every app</p>
+        <h3>Works wherever you type</h3>
+        <p>Pasting works almost everywhere. For an app that blocks it, have VoxyScribe type the words instead, or just copy them. Choose app by app.</p>
+        <div class="viz apps" aria-hidden="true">
+          <div>Outlook <span>Paste</span></div>
+          <div>Remote Desktop <span>Type</span></div>
+          <div>Anything else <span>Paste</span></div>
+        </div>
+      </article>
+
+      <article class="card span-3 c-wide" data-reveal style="--d:1">
+        <p class="tag">Nothing lost</p>
+        <h3>Every dictation, kept on your PC</h3>
+        <p>Clicked away by mistake? <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>V</kbd> puts your last dictation in again. History keeps the rest, and you can clear it any time.</p>
+        <div class="viz hist" aria-hidden="true">
+          <div><time>2:41</time><span>Thanks, that works for me. I'll send the file tonight.</span></div>
+          <div><time>2:36</time><span>Can we push the call to three thirty?</span></div>
+          <div><time>1:58</time><span>Remember to order more printer paper.</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Audio files ============ -->
+<section class="band" id="files">
+  <div class="wrap files-in">
+    <div class="files-copy" data-reveal>
+      <p class="kicker">Audio files</p>
+      <h2 class="title">Hand it a recording. <em>Get a transcript.</em></h2>
+      <p>Pick an interview, a lecture, or a voice memo from the tray menu and choose where the transcript goes. It comes out in paragraphs, each stamped with its time, tidied like your dictation and spelled with your dictionary.</p>
+      <ul class="ticks">
+        <li><strong>Who is speaking.</strong> Turn on speaker labels and VoxyScribe works out how many people talk and marks each paragraph. Name them once and their voices are recognized next time. It learns your own voice from your dictation.</li>
+        <li><strong>Quick.</strong> On an 8-core desktop processor, an hour of audio takes about 6 minutes, or about 9 with speaker labels.</li>
+        <li><strong>Always in view.</strong> The tray icon fills as it works. Point at it for the percentage and time left, or cancel from the tray menu.</li>
+      </ul>
+      <p class="formats" aria-label="Supported formats"><span>MP3</span><span>WAV</span><span>M4A</span><span>MP4</span><span>AAC</span><span>WMA</span><span>FLAC</span></p>
+    </div>
+
+    <div class="files-visual" data-reveal style="--d:1" aria-label="Example transcript with times and speaker names">
+      <div class="tray" aria-hidden="true">
+        <div class="tip">VoxyScribe - transcribing team-sync.m4a<br><span class="bar" id="tipbar">██████░░░░</span> <span id="tippct">62%</span>, about 2 min left</div>
+        <span class="trayicon"><i id="trayfill"><svg viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"><path d="M20 16 L32 52 L44 16" stroke-width="8"/></svg></i></span>
+      </div>
+      <div class="paper">
+        <div class="fname"><span>team-sync.txt</span><span>2 speakers</span></div>
+        <p><span class="ts">[0:00]</span> <span class="who a">Dana:</span> Thanks for making time. I wanted to walk through the launch plan before Friday.</p>
+        <p><span class="ts">[0:07]</span> <span class="who b">Marcus:</span> Sure. The short version is we're on track, but the installer still needs one more test.</p>
+        <p><span class="ts">[0:15]</span> <span class="who a">Dana:</span> Okay. What's left on that?</p>
+        <p><span class="ts">[0:18]</span> <span class="who b">Marcus:</span> Mostly older laptops. I'll have the results Wednesday morning.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Listening bar styles ============ -->
+<section class="band" id="styles">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="kicker">Make it yours</p>
+      <h2 class="title">Six ways to <em>see it listening.</em></h2>
+      <p class="sub">The listening bar floats over your work while you talk. Blue is your voice; gray is other sound. Pick a style, light or dark, and try it with your own voice.</p>
+    </div>
+    <div class="play" data-reveal>
+      <div class="seg" role="radiogroup" aria-label="Listening bar style" id="style-seg">
+        <button type="button" role="radio" aria-checked="true" data-style="scrolling">Scrolling</button>
+        <button type="button" role="radio" aria-checked="false" data-style="pulse">Pulse</button>
+        <button type="button" role="radio" aria-checked="false" data-style="ripple">Ripple</button>
+        <button type="button" role="radio" aria-checked="false" data-style="spectrum">Spectrum</button>
+        <button type="button" role="radio" aria-checked="false" data-style="wave">Wave</button>
+        <button type="button" role="radio" aria-checked="false" data-style="glow">Glow</button>
+      </div>
+      <div class="play-stage" id="play-stage" data-bg="dark">
+        <div class="pill" id="play-pill" data-theme="dark" data-style="scrolling"></div>
+      </div>
+      <p class="play-hint" id="play-hint" aria-live="polite">Your last second of sound scrolls past, newest on the right.</p>
+      <div class="play-ctrls">
+        <div class="seg seg-sm" role="radiogroup" aria-label="Listening bar theme" id="theme-seg">
+          <button type="button" role="radio" aria-checked="true" data-theme="dark">Dark</button>
+          <button type="button" role="radio" aria-checked="false" data-theme="light">Light</button>
+        </div>
+        <button type="button" class="btn btn-ghost mic-btn" id="mic-btn" aria-pressed="false"><span class="dot"></span><span id="mic-lbl">Try it with your voice</span></button>
+      </div>
+      <p class="micnote" id="mic-note">Your microphone stays in this browser tab. Nothing is recorded or sent.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Settings ============ -->
+<section class="band">
+  <div class="wrap shots-in">
+    <div data-reveal>
+      <p class="kicker">Settings</p>
+      <h2 class="title">One calm window <em>for the rest.</em></h2>
+      <p>Change the hotkey, add words and snippets, pick a start sound and a style. VoxyScribe follows your Windows light or dark setting, or you can choose.</p>
+    </div>
+    <div class="stack" data-reveal style="--d:1">
+      <figure class="shot shot-back">
+        <figcaption><img src="assets/img/icon.svg" alt="">VoxyScribe Settings</figcaption>
+        <img src="assets/img/settings-interface.png" width="1000" height="640" loading="lazy" alt="The Interface settings page: theme, level bar style, pop-ups, sound cues, and live preview.">
+      </figure>
+      <figure class="shot shot-front">
+        <figcaption><img src="assets/img/icon.svg" alt="">VoxyScribe Settings</figcaption>
+        <img src="assets/img/settings-dictionary.png" width="1000" height="525" loading="lazy" alt="The Dictionary page listing words such as Kubernetes and Siobhan, each with the wrong versions it fixes.">
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Privacy ============ -->
+<section class="band privacy" id="privacy">
+  <div class="wrap privacy-in">
+    <div data-reveal>
+      <p class="kicker">Privacy</p>
+      <h2 class="display-md">What you say <em>stays on your PC.</em></h2>
+      <p>VoxyScribe has no account, no analytics, and no ads. Speech recognition, speaker labels, and the optional AI cleanup all run on your computer. Recordings are never saved. Here is every time it uses the internet:</p>
+    </div>
+    <dl class="ledger" data-reveal style="--d:1">
+      <div><dt>Once, at first start</dt><dd>Downloads the speech model (about 660 MB).</dd></div>
+      <div><dt>Once, if you use speaker labels</dt><dd>Downloads the voice model (26 MB).</dd></div>
+      <div><dt>Once, if you turn on AI cleanup</dt><dd>Downloads the cleanup model you choose.</dd></div>
+      <div><dt>Once a day</dt><dd>Checks GitHub for a new version. An update installs only if it matches the SHA-256 fingerprint published with it.</dd></div>
+      <div class="never"><dt>Never</dt><dd>Your voice, your words, your files, or how you use it.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- ============ Install ============ -->
+<section class="band" id="download">
+  <div class="wrap install-in">
+    <div data-reveal>
+      <p class="kicker">Get started</p>
+      <h2 class="title">Up and running <em>in minutes.</em></h2>
+      <ol class="install-steps">
+        <li><span><strong>Download and run the installer.</strong> It installs for your Windows account, with no administrator rights needed.</span></li>
+        <li><span><strong>If Windows warns you</strong> that the publisher is unknown, choose <em>More info</em>, then <em>Run anyway</em>.</span></li>
+        <li><span><strong>Start VoxyScribe</strong> from the Start menu. The first time, it downloads its speech model, and the listening bar shows the progress.</span></li>
+        <li><span><strong>Hold <kbd>Ctrl</kbd> <kbd>Shift</kbd> <kbd>Space</kbd>, talk, and let go.</strong> New versions are offered in the app as they come out.</span></li>
+      </ol>
+    </div>
+    <aside class="card req" data-reveal style="--d:1">
+      <h3>What you need</h3>
+      <ul>
+        <li>Windows 10 or 11, 64-bit</li>
+        <li>About 1 GB of disk space</li>
+        <li>A microphone</li>
+        <li>Internet once, for the speech model</li>
+        <li>English speech</li>
+      </ul>
+      <a class="btn btn-primary" href="https://github.com/CCHerbst/voxyscribe-releases/releases/latest" data-download>
+        <svg width="16" height="16" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M0 2.8l8.2-1.1v7.9H0zm9.2-1.3L20 0v9.6H9.2zM0 10.4h8.2v7.9L0 17.2zm9.2 0H20V20l-10.8-1.5z"/></svg>
+        Download for Windows
+      </a>
+      <p class="small"><span data-version>Latest version</span> · <a href="https://github.com/CCHerbst/voxyscribe-releases/releases/latest" data-notes>What's new</a></p>
+    </aside>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="band" id="faq">
+  <div class="wrap">
+    <div class="head" data-reveal>
+      <p class="kicker">Questions</p>
+      <h2 class="title">Good to know</h2>
+    </div>
+    <div class="faq" data-reveal>
+      <details>
+        <summary>Is VoxyScribe free?</summary>
+        <p>Yes. Download it and use it under the license the installer shows. There's no account to create and nothing to sign up for.</p>
+      </details>
+      <details>
+        <summary>Does it work without the internet?</summary>
+        <p>Yes, once the speech model has downloaded at first start. Dictation and audio files work offline; speaker labels need a 26 MB download the first time you use them.</p>
+      </details>
+      <details>
+        <summary>Which languages does it understand?</summary>
+        <p>English. The speech model is built for English. Add unusual names and terms to the dictionary and it listens for them.</p>
+      </details>
+      <details>
+        <summary>Do I need a graphics card?</summary>
+        <p>No. Speech recognition runs on your processor. A graphics card is used only for the optional AI cleanup, if you have one.</p>
+      </details>
+      <details>
+        <summary>Which apps does it work with?</summary>
+        <p>Anything with a place to type: Word, Outlook, Gmail and other websites, Slack, Teams, Notepad, and more. VoxyScribe pastes your words by default. If an app blocks pasting, set it to type them instead in the Output settings.</p>
+      </details>
+      <details>
+        <summary>Are my recordings saved?</summary>
+        <p>No. Your voice is held in memory only while it's turned into text. History keeps the text on your PC, and you can clear it. Voices you name for speaker labels are stored on your PC as voice fingerprints, and you can forget them.</p>
+      </details>
+      <details>
+        <summary>How do updates work?</summary>
+        <p>Once a day VoxyScribe checks GitHub for a new version. When there is one, it asks you first, then installs it only if the download matches the SHA-256 fingerprint published with the release.</p>
+      </details>
+      <details>
+        <summary>How do I uninstall it?</summary>
+        <p>Like any other app: open Windows Settings, go to Apps, find VoxyScribe, and choose Uninstall.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ Final call ============ -->
+<section class="final">
+  <div class="wrap">
+    <div class="final-bars" id="final-bars" aria-hidden="true"></div>
+    <h2 class="display" data-reveal>Your next email,<br><em>said out loud.</em></h2>
+    <div data-reveal style="--d:1">
+      <a class="btn btn-primary btn-lg" href="https://github.com/CCHerbst/voxyscribe-releases/releases/latest" data-download>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M0 2.8l8.2-1.1v7.9H0zm9.2-1.3L20 0v9.6H9.2zM0 10.4h8.2v7.9L0 17.2zm9.2 0H20V20l-10.8-1.5z"/></svg>
+        <span>Download for Windows<small data-meta>Free · Windows 10 and 11</small></span>
+      </a>
+      <p class="small"><a href="https://github.com/CCHerbst/voxyscribe-releases/releases">All versions and release notes</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <a class="brand" href="#main"><img src="assets/img/icon.svg" alt="" width="24" height="24"><span>VoxyScribe</span></a>
+    <div>
+      <p>© 2026 CCHerbst. VoxyScribe is free to use under the license shown in the installer.</p>
+      <p>Speech recognition: NVIDIA Parakeet, licensed by NVIDIA Corporation under the NVIDIA Open Model License. Speaker labels: 3D-Speaker ERes2Net.</p>
+    </div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/CCHerbst/voxyscribe-releases/releases">Releases</a>
+      <a href="#privacy">Privacy</a>
+      <a href="assets/fonts/OFL.txt">Font licenses</a>
+    </nav>
+  </div>
+</footer>
+</body>
+</html>
