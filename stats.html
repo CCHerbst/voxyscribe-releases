@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VoxyScribe Downloads</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#090c13">
+<link rel="icon" href="assets/img/icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/site.css">
+<style>
+.stats { padding: clamp(40px, 8vh, 96px) 0 clamp(56px, 10vh, 112px); }
+.stats .lede { max-width: 54ch; margin: 26px 0 52px; }
+.total { font-variant-numeric: tabular-nums; }
+.rows { width: 100%; border-collapse: collapse; font-size: 15.5px; }
+.rows th { text-align: left; font: 500 12px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--faint); padding: 0 0 14px; }
+.rows td { padding: 15px 0; border-top: 1px solid var(--line); vertical-align: middle; }
+.rows .v { font-weight: 600; width: 7.5em; }
+.rows .d { color: var(--muted); width: 9em; }
+.rows .b { padding-right: 20px; }
+.rows .n { text-align: right; font-family: var(--mono); width: 5em; }
+.bar { height: 8px; min-width: 3px; border-radius: 99px; background: linear-gradient(90deg, var(--dusk), var(--signal)); transform-origin: left; animation: grow 0.9s var(--ease) both; }
+@keyframes grow { from { transform: scaleX(0); } }
+@media (prefers-reduced-motion: reduce) { .bar { animation: none; } }
+.note { color: var(--faint); font-size: 14.5px; max-width: 64ch; margin: 36px 0 0; }
+@media (max-width: 560px) { .rows .d { display: none; } }
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap top-in"><a class="brand" href="./"><img src="assets/img/icon.svg" alt="" width="28" height="28"><span>VoxyScribe</span></a></div></header>
+
+<main class="stats" id="main"><div class="wrap">
+  <p class="eyebrow"><span class="live-dot" aria-hidden="true"></span>Downloads · live from GitHub</p>
+  <h1 class="display total"><span id="total">…</span> <em id="unit">downloads</em></h1>
+  <p class="lede" id="status">Counting the installer downloads for every version…</p>
+  <table class="rows" id="table" hidden>
+    <thead><tr><th class="v">Version</th><th class="d">Released</th><th class="b"><span class="sr-only">Share</span></th><th class="n">Downloads</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+  <p class="note">Each download of the installer counts once, including installed copies updating themselves and test downloads, so this counts downloads, not people. Visits to the website aren't counted.</p>
+</div></main>
+
+<script>
+(async () => {
+  const $ = id => document.getElementById(id);
+  const time = new Date().toLocaleTimeString([], { hour: "numeric", minute: "2-digit" });
+  try {
+    // ponytail: the first 100 releases; page through with &page= once there are more
+    const r = await fetch("https://api.github.com/repos/CCHerbst/voxyscribe-releases/releases?per_page=100");
+    if (!r.ok) throw new Error(r.status);
+    const releases = (await r.json()).filter(x => !x.draft).map(x => ({
+      tag: x.tag_name,
+      date: new Date(x.published_at),
+      n: x.assets.filter(a => a.name.endsWith(".msi")).reduce((s, a) => s + a.download_count, 0),
+    }));
+    const total = releases.reduce((s, x) => s + x.n, 0);
+    const max = Math.max(1, ...releases.map(x => x.n));
+    $("total").textContent = total.toLocaleString();
+    $("unit").textContent = total === 1 ? "download" : "downloads";
+    if (!releases.length) { $("status").textContent = `No releases yet. Checked at ${time}.`; return; }
+    $("status").textContent = `Installer downloads across ${releases.length} version${releases.length === 1 ? "" : "s"}. ` +
+      `The newest, ${releases[0].tag}, has ${releases[0].n.toLocaleString()}. Checked at ${time}; reload for the latest.`;
+    for (const x of releases) {
+      const tr = $("rows").insertRow();
+      const cell = (cls, text) => { const td = tr.insertCell(); td.className = cls; td.textContent = text; return td; };
+      cell("v", x.tag);
+      cell("d", x.date.toLocaleDateString([], { year: "numeric", month: "short", day: "numeric" }));
+      const bar = document.createElement("div");
+      bar.className = "bar";
+      bar.style.width = (x.n / max * 100) + "%";
+      cell("b", "").append(bar);
+      cell("n", x.n.toLocaleString());
+    }
+    $("table").hidden = false;
+  } catch {
+    $("total").textContent = "–";
+    $("status").textContent = "Couldn't reach GitHub just now. It allows 60 lookups an hour from one network, so try again in a few minutes.";
+  }
+})();
+</script>
+</body>
+</html>
